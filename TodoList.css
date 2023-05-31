@@ -80,11 +80,12 @@
 }
 
 .listWrapper .listItems {
-    padding: 12px 8px 12px 40px;
+    padding: 12px 40px 12px 40px;
     list-style: none;
     font-size: 18px;
     user-select: none;
     position: relative;
+    word-wrap: break-word;
 }
 
 .listWrapper .listItems::before {
@@ -110,9 +111,19 @@
 
 .cancelIcon{
     position: absolute;
-    color: red;
-    width: 20px;
-    height: 20px;
+    color: rgb(129, 129, 129);
     right: 15px;
     top: 11px;
+    width: 24px;
+    text-align: center;
+    height: 24px;
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.cancelIcon:hover{
+    background-color: rgb(232, 220, 220);
+    color: white;
+    transition: 0.5s ease-in-out;
 }

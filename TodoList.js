@@ -10,9 +10,31 @@ let taskAdded = () =>{
         list.classList.add("listItems")
         list.innerHTML = input.value;
         listwrapper.appendChild(list);
-        // let crossIcon = document.createElement("span");
-        // crossIcon.classList.add("cancelIcon")
-        // list.appendChild("crossIcon");
+        let crossIcon = document.createElement("span");
+        crossIcon.classList.add("cancelIcon")
+        crossIcon.innerHTML = "&#10006"
+        list.appendChild(crossIcon);
     }
-    input.value = ""
+    input.value = "";
+    listData();
 }
+
+listwrapper.addEventListener("click",(e)=>{
+    if(e.target.tagName === "LI"){
+        e.target.classList.toggle("checked");
+        listData();
+    }
+    else if(e.target.tagName === "SPAN"){
+        e.target.parentElement.remove();
+        listData();
+    }
+})
+
+let listData = () =>{
+    localStorage.setItem("data",listwrapper);
+}
+
+let showData = () =>{
+    listwrapper.innerHTML = localStorage.getItem("data");
+}
+showData();
