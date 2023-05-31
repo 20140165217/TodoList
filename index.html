@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="./TodoList.css">
+</head>
+
+<body>
+    <div class="mainwrapper">
+        <div class="contentwrapper">
+            <h3 class="Heading" id="heading">To-Do List 📑</h3>
+            <div class="search-wrapper">
+                <input class="input" id="search-input" type="text" placeholder="Add your task here">
+                <button class="add-btn" onclick="taskAdded()">Add</button>
+                <!-- <button>Added</button> //add this for 2-3 secdonds and after that change the button back as it was.-->
+            </div>
+            <ul class="listWrapper" id="listWrapper">
+                <!-- <li class="listItems checked">Task 1</li>
+                <span class="cancelIcon">&#10006</span> -->
+                <!-- <li class="listItems">Task 2</li>
+                <li class="listItems">Task 3</li>
+                <li class="listItems">Task 4</li> -->
+            </ul>
+        </div>
+    </div>
+    <script src="./TodoList.js"></script>
+</body>
+
+</html>

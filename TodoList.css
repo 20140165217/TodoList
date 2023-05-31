@@ -1,0 +1,118 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.mainwrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: -webkit-fill-available; */
+    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+}
+
+.contentwrapper {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px 15px;
+    width: 40%;
+}
+
+.Heading {
+    font-size: 24px;
+    font-weight: 500;
+    color: #6316e8;
+}
+
+.search-wrapper {
+    margin: 15px 0px;
+}
+
+.input {
+    background-color: rgb(231, 223, 223);
+    border-radius: 30px;
+    padding: 20px 130px 20px 20px;
+    border: none;
+    position: relative;
+    width: 100%;
+    color: black;
+    caret-color: rgb(129, 129, 129);
+    color: rgb(129, 129, 129);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.input:focus-visible {
+    outline: none;
+}
+
+.input::placeholder {
+    color: rgb(129, 129, 129);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.add-btn {
+    position: absolute;
+    border-radius: 30px;
+    padding: 20px 50px;
+    right: 371px;
+    border: none;
+    cursor: pointer;
+    background-color: orchid;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.add-btn:hover {
+    background-color: rgb(193, 66, 189);
+}
+
+.listWrapper {
+    cursor: pointer;
+    position: relative;
+    max-height: 180px;
+    overflow: auto;
+}
+
+.listWrapper .listItems {
+    padding: 12px 8px 12px 40px;
+    list-style: none;
+    font-size: 18px;
+    user-select: none;
+    position: relative;
+}
+
+.listWrapper .listItems::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-image: url('./images/unchecked.png');
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+}
+
+.listWrapper .checked {
+    color: #928f8f;
+    text-decoration: line-through;
+}
+
+.listWrapper .checked::before {
+    background-image: url('./images/checkedImg.svg');
+}
+
+.cancelIcon{
+    position: absolute;
+    color: red;
+    width: 20px;
+    height: 20px;
+    right: 15px;
+    top: 11px;
+}
