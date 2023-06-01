@@ -1,5 +1,6 @@
 let input = document.getElementById("search-input");
 let listwrapper = document.getElementById("listWrapper");
+let button = document.getElementById("btn");
 
 let taskAdded = () =>{
     if(input.value === ""){
@@ -31,7 +32,7 @@ listwrapper.addEventListener("click",(e)=>{
 })
 
 let listData = () =>{
-    localStorage.setItem("data",listwrapper);
+    localStorage.setItem("data",listwrapper.innerHTML);
 }
 
 let showData = () =>{

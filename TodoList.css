@@ -18,7 +18,8 @@
     background-color: white;
     border-radius: 12px;
     padding: 20px 15px;
-    width: 40%;
+    max-width: 60%;
+    min-width: 40%;
 }
 
 .Heading {
@@ -29,6 +30,7 @@
 
 .search-wrapper {
     margin: 15px 0px;
+    position: relative;
 }
 
 .input {
@@ -36,7 +38,6 @@
     border-radius: 30px;
     padding: 20px 130px 20px 20px;
     border: none;
-    position: relative;
     width: 100%;
     color: black;
     caret-color: rgb(129, 129, 129);
@@ -59,7 +60,9 @@
     position: absolute;
     border-radius: 30px;
     padding: 20px 50px;
-    right: 371px;
+    right: 0;
+    top: 0;
+    bottom: 0;
     border: none;
     cursor: pointer;
     background-color: orchid;
@@ -72,11 +75,39 @@
     background-color: rgb(193, 66, 189);
 }
 
+@media screen and (max-width:600px) {
+    .input {
+        padding: 14px 110px 14px 14px;
+    } 
+
+    .add-btn{
+        padding: 14px 40px;
+    }
+
+    .contentwrapper{
+        max-width: 95%;
+    }
+}
+
 .listWrapper {
     cursor: pointer;
     position: relative;
     max-height: 180px;
     overflow: auto;
+}
+
+.listWrapper::-webkit-scrollbar{
+    width: 6px;
+}
+
+.listWrapper::-webkit-scrollbar-track{
+    background-color: rgb(239, 232, 232);
+    border-radius: 12px;
+}
+
+.listWrapper::-webkit-scrollbar-thumb{
+    border-radius: 12px;
+    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);;
 }
 
 .listWrapper .listItems {
